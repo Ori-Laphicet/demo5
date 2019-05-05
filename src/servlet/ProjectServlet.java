@@ -69,6 +69,5 @@ public class ProjectServlet extends HttpServlet {
             req.getRequestDispatcher("ProManager.jsp").forward(req,resp);
         }
 
-//        erfniuqwea
     }
 }
