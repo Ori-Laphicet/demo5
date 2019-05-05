@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="专家-项目:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/__war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="专家-项目" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="专家-项目/web/Web" />
+    </root>
+  </artifact>
+</component>
