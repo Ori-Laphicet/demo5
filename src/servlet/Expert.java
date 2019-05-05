@@ -1,6 +1,5 @@
 package servlet;
 
-import Util.VerifyIDutil;
 import business.AdminService;
 import business.ExpSevice;
 import business.ProService;
@@ -31,16 +30,7 @@ public class Expert extends HttpServlet {
             AdminService ads = new AdminService();
             //身份证校验
             String iden = req.getParameter("identity");
-            VerifyIDutil ver = new VerifyIDutil();
-            if (!ver.isreal(iden)){
-               /* PrintWriter out = resp.getWriter();
-                out.println("<script>");
-                out.println("alert('请输入有效的身份证号!');");
-                out.println("</script>");
-                out.close();
-                resp.sendRedirect("Expert?param=gotomanage");
-                return;*/
-            }else if (expService.findExpByIdentity(iden) != null){
+            if (expService.findExpByIdentity(iden) != null){
                 exp = expService.findExpByIdentity(iden);
                 if (exp.getDel() == false) {
                     PrintWriter out = resp.getWriter();
